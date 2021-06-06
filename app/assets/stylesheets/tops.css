@@ -1,0 +1,19 @@
+.header {
+  width: 100vw;
+  height: 80px;
+  background-color: burlywood;
+}
+
+.main {
+  width: 100vw;
+  height: calc( 100vh - 80px );
+  position: relative;
+}
+
+.title {
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 50px;
+  left: 250px;
+}
