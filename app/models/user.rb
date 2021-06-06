@@ -8,4 +8,5 @@ class User < ApplicationRecord
     validates :nickname
     validates :birthday
     validates :phone_number
+  end
 end
