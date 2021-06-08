@@ -4,5 +4,6 @@ class Character < ApplicationRecord
 
   with_options presence: true do
     validates :name
+    validates :image
   end
 end
