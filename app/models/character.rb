@@ -1,4 +1,6 @@
 class Character < ApplicationRecord
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :gender
   belongs_to :user
   has_one_attached :image
 
