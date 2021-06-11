@@ -37,7 +37,7 @@
     <div class='form-text-wrap'>
       <label class="form-text">性別</label>
     </div>
-    <%= f.text_field :gender_id, class:"input-default", id:"gender", placeholder:"" %>
+    <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"input-default", id:"gender", placeholder:""}) %>
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
