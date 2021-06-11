@@ -5,7 +5,8 @@ class Character < ApplicationRecord
   has_one_attached :image
 
   with_options presence: true do
-    validates :name
+    validates :name, uniqueness: { case_sensitive: false }, length: { maximum: 40 }
     validates :image
   end
+    validates :residence, length: { maximum: 40 }
 end
