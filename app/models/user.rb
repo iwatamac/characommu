@@ -7,8 +7,10 @@ class User < ApplicationRecord
   has_many :characters
 
   with_options presence: true do
-    validates :nickname
+    validates :nickname, uniqueness: { case_sensitive: false }, length: { maximum: 40 }
+    validates :password, format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]/, message: 'Include both letters and numbers'}
     validates :birthday
-    validates :phone_number
+    validates :phone_number, numericality: {only_integer: true,message: 'is invalid. Input only number'},
+                             length: { minimum: 10, maximum: 11, message: 'is too short' }
   end
 end
