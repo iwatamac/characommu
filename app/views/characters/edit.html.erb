@@ -1,6 +1,6 @@
 <%= render "shared/header"%>
 
-<%= form_with model: @character, url: characters_path, class: 'registration-main', local: true do |f| %>
+<%= form_with model: @character, class: 'registration-main', local: true do |f| %>
   
   <div class='form-wrap'>
   <div class='form-header'>
@@ -48,7 +48,7 @@
     <%= f.text_area :introductions, class:"input-default", id:"password-confirmation", placeholder:"自己紹介を入力してください" %>
   </div>
   <div class="">
-      <%= f.submit "作成する" ,class:"sell-btn" %>
+      <%= f.submit "編集する" ,class:"sell-btn" %>
     </div>
 
 <% end %>

@@ -27,6 +27,11 @@ class CharactersController < ApplicationController
   end
 
   def update
+    if @character.update(character_params)
+      redirect_to character_path
+    else
+      render :edit
+    end
   end
 
   private
