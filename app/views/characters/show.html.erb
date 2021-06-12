@@ -20,3 +20,6 @@
     <%= @character.introductions %> 
   </div>  
 </div>  
+
+<%# 編集と削除ページの実装 %>
+<%= link_to "編集", edit_character_path(@character.id), class: "character-edit-btn" %>

@@ -1,6 +1,7 @@
 class CharactersController < ApplicationController
 
   before_action :authenticate_user!, only: [:index, :new, :create]
+  before_action :set_character, only: [:show, :edit, :update ]
   
   def index
     @characters = Character.includes(:user)
@@ -20,12 +21,21 @@ class CharactersController < ApplicationController
   end
 
   def show
-    @character = Character.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
   end
 
   private
 
   def character_params
     params.require(:character).permit(:name, :residence, :gender_id, :introductions, :image).merge(user_id: current_user.id)
+  end
+
+  def set_character
+    @character = Character.find(params[:id])
   end
 end
