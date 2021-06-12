@@ -7,7 +7,6 @@
 
   <% @characters.each do |character| %>
     <li class='list'>
-    <%#= link_to characters_path(character.id) do %>
     <div class='character-img-content'>
       <%= link_to character_path(character.id) do %>
       <%= image_tag character.image, class: "character-img" %>

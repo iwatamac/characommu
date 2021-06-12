@@ -1,0 +1,54 @@
+<%= render "shared/header"%>
+
+<%= form_with model: @character, class: 'registration-main', local: true do |f| %>
+  
+  <div class='form-wrap'>
+  <div class='form-header'>
+    <h1 class='form-header-text'>
+      キャラクター情報入力
+    </h1>
+  </div>
+  <%= render 'shared/error_messages', model: @character %>
+
+  <div class="img-upload">
+      <div class="weight-bold-text">
+        出品画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"character-image" %>
+      </div>
+    </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">名前</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :name, class:"input-default", id:"character-name", placeholder:"例) furima太郎" %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">出身</label>
+    </div>
+    <%= f.text_area :residence, class:"input-default", id:"residence", placeholder:"", autofocus: true %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">性別</label>
+    </div>
+    <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"input-default", id:"gender", placeholder:""}) %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">自己紹介</label>
+    </div>
+    <%= f.text_area :introductions, class:"input-default", id:"password-confirmation", placeholder:"自己紹介を入力してください" %>
+  </div>
+  <div class="">
+      <%= f.submit "編集する" ,class:"sell-btn" %>
+    </div>
+
+<% end %>
