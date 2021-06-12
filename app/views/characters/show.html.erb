@@ -1,2 +1,22 @@
 <%= render "shared/header"%>
 
+<%# 商品の概要 %>
+<div class="character-show">
+  <div class="character-img-content">
+      <%= image_tag @character.image, class:"character-box-img" %>
+  </div>
+  <div class="character-name-content">
+    <h2 class="name">
+      <%= @character.name %>
+    </h2>
+  </div>  
+  <div class="character-residence">
+      <% @character.residence %>
+  </div>    
+  <div class="character-gender">
+    <%= @character.gender.name %> 
+  </div>
+  <div class="character-introductions">
+    <%= @character.introductions %> 
+  </div>  
+</div>  
