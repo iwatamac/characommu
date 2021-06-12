@@ -1,6 +1,26 @@
 <%= render "shared/header"%>
 
-<%# 商品一覧 %>
-<%# /商品一覧 %>
+<%# キャラ一覧 %>
+<div class='character-contents'>
+  <h2 class='title'>キャラクターリスト</h2>
+  <ul class='character-lists'>
+
+  <% @characters.each do |character| %>
+    <li class='list'>
+    <%#= link_to characters_path(character.id) do %>
+    <div class='character-img-content'>
+      <%= image_tag character.image, class: "character-img" %>
+    </div>
+    <h3 class='character-name'>
+      <%= character.name %>
+    </h3>
+    </li>
+  <% end %>
+  </ul>
+</div>  
+
+
+
+<%# /キャラ一覧 %>
 
 <%= link_to 'キャラクター作成', new_character_path, class: 'character-btn' %>
