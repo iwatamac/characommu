@@ -4,7 +4,7 @@ class CharactersController < ApplicationController
   before_action :set_character, only: [:show, :edit, :update, :destroy ]
   
   def index
-    @characters = Character.includes(:user)
+    @characters = Character.includes(:user).where(user_id: current_user.id)
   end
 
   def new
