@@ -1,7 +1,9 @@
 class CharactersController < ApplicationController
 
-  before_action :authenticate_user!, only: [:index, :new, :create]
+  before_action :authenticate_user!
   before_action :set_character, only: [:show, :edit, :update, :destroy ]
+  before_action :move_to_index, only: [:edit, :update, :destroy ]
+  
   
   def index
     @characters = Character.includes(:user).where(user_id: current_user.id)
@@ -47,5 +49,9 @@ class CharactersController < ApplicationController
 
   def set_character
     @character = Character.find(params[:id])
+  end
+
+  def move_to_index
+    redirect_to characters_path unless @character.user == current_user
   end
 end
