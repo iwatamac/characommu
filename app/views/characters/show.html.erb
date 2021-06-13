@@ -22,5 +22,9 @@
 </div>  
 
 <%# 編集と削除ページの実装 %>
+<% if user_signed_in? %>
+<% if current_user.id == @character.user_id %>
 <%= link_to "編集", edit_character_path(@character.id), class: "character-edit-btn" %>
 <%= link_to "削除", character_path, method: :delete, class: "character-delete-btn" %>
+<% end %>
+<% end %>
