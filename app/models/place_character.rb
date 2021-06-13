@@ -1,0 +1,2 @@
+class PlaceCharacter < ApplicationRecord
+end
