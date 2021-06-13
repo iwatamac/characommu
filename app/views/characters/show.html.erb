@@ -23,4 +23,4 @@
 
 <%# 編集と削除ページの実装 %>
 <%= link_to "編集", edit_character_path(@character.id), class: "character-edit-btn" %>
-
+<%= link_to "削除", character_path, method: :delete, class: "character-delete-btn" %>

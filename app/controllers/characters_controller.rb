@@ -1,7 +1,7 @@
 class CharactersController < ApplicationController
 
   before_action :authenticate_user!, only: [:index, :new, :create]
-  before_action :set_character, only: [:show, :edit, :update ]
+  before_action :set_character, only: [:show, :edit, :update, :destroy ]
   
   def index
     @characters = Character.includes(:user)
@@ -28,7 +28,7 @@ class CharactersController < ApplicationController
 
   def destroy
     @character.destroy
-    redirect_to character_path
+    redirect_to characters_path
   end 
 
   def update
