@@ -3,6 +3,8 @@ class Character < ApplicationRecord
   belongs_to :gender
   belongs_to :user
   has_one_attached :image
+  has_many :place_characters
+  has_many :places, through: :place_characters
 
   with_options presence: true do
     validates :name, uniqueness: { case_sensitive: false }, length: { maximum: 40 }
