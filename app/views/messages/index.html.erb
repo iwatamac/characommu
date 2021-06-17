@@ -1,8 +1,10 @@
 <%= render "shared/header"%>
 
 <% @place.characters.each do |character| %>
+<%= link_to character_path(character.id) do %>
 <%= character.name %>
 <%= image_tag character.image %>
+<% end %>
 <% end %>
 
 
