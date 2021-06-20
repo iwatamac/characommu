@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 root to: "tops#index"
 resources :characters do
 end
-resources :places, only: [:index, :new, :create ] do
+resources :places, only: [:index, :new, :create, :destroy ] do
   resources :messages, only: [:index, :create]
 end
 end

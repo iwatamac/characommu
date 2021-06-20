@@ -1,5 +1,8 @@
 <%= render "shared/header"%>
 
+
+<%= link_to 'トークを終了する',place_path(@place), method: :delete %>
+
 <% @place.characters.each do |character| %>
 <%= link_to character_path(character.id) do %>
 <%= character.name %>
