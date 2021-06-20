@@ -2,6 +2,8 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @place = Place.find(params[:place_id])
+    @places = Place.all
+    @character = @place.characters.where(user_id: current_user.id)
     @characters = Character.includes(:user)
     @messages = @place.messages.includes(:user)
   end
