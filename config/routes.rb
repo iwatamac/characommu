@@ -7,5 +7,4 @@ end
 resources :places, only: [:index, :new, :create ] do
   resources :messages, only: [:index, :create]
 end
-
 end

@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
     @message = Message.new
     @place = Place.find(params[:place_id])
     @characters = Character.includes(:user)
-
+    @messages = @place.messages.includes(:user)
   end
 
   def create
@@ -12,6 +12,7 @@ class MessagesController < ApplicationController
     if @message.save
       redirect_to place_messages_path(@place)
     else
+      @messages = @place.messages.includes(:user)
       render :index
     end
   end
@@ -19,7 +20,6 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:content).merge(character_id: params[:character_id], place_id: params[:place_id] )
+    params.require(:message).permit(:content).merge(user_id: current_user.id)
   end
-
 end

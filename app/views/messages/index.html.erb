@@ -14,3 +14,11 @@
   </div>
   <%= f.submit '送信', class: 'form-submit' %>
 <% end %>    
+
+<% @messages.each do |message| %>
+<%= message.user.nickname %>
+<%= l message.created_at %>
+<%= message.content %>
+<p></p>
+
+<% end %>

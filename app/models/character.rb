@@ -5,7 +5,6 @@ class Character < ApplicationRecord
   has_one_attached :image
   has_many :place_characters
   has_many :places, through: :place_characters
-  has_many :messages
 
   with_options presence: true do
     validates :name, uniqueness: { case_sensitive: false }, length: { maximum: 40 }
