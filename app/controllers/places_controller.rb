@@ -20,7 +20,8 @@ class PlacesController < ApplicationController
 
   def destroy
     place = Place.find(params[:id])
-    place.destroy
+    character = place.characters.where(user_id: current_user.id)
+    place.characters.delete(character)
     redirect_to places_path
   end
 

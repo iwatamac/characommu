@@ -5,7 +5,9 @@
 <p></p>
 
 
-<%= link_to 'トークを終了する',place_path(@place), method: :delete %>
+<% if @character.present? %>
+<%= link_to '退出する',place_path(@place), method: :delete %>
+<% end %>
 
 <% @place.characters.each do |character| %>
 <%= link_to character_path(character.id) do %>

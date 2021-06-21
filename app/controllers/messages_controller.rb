@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @message = Message.new
     @place = Place.find(params[:place_id])
@@ -17,6 +17,8 @@ class MessagesController < ApplicationController
       redirect_to place_messages_path(@place)
     else
       @messages = @place.messages.includes(:user)
+      @places = Place.all
+      @character = @place.characters.where(user_id: current_user.id)
       render :index
     end
   end
@@ -24,6 +26,6 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:content).merge(user_id: current_user.id)
+    params.require(:message).permit(:content).merge(user_id: current_user.id,)
   end
 end
