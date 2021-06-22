@@ -1,4 +1,6 @@
 <%= render "shared/header"%>
+
+
 <% @places.each do |place| %>
 <%= link_to place.name, place_messages_path(place) %>
 <% end %>
@@ -8,6 +10,11 @@
 <% if @character.present? %>
 <%= link_to '退出する',place_path(@place), method: :delete %>
 <% end %>
+
+<% if @character.empty? %>
+<%= link_to '参加する', edit_place_path(@place) %>
+<% end %>
+<p></p>
 
 <% @place.characters.each do |character| %>
 <%= link_to character_path(character.id) do %>
