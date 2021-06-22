@@ -1,5 +1,6 @@
 class PlacesController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_place, only: [:edit, :update, :destroy, :place_destroy]
 
   def index
     @places = Place.all
@@ -19,24 +20,26 @@ class PlacesController < ApplicationController
   end
 
   def destroy
-    place = Place.find(params[:id])
     character = place.characters.where(user_id: current_user.id)
     place.characters.delete(character)
     redirect_to places_path
   end
 
   def edit
-    @place = Place.find(params[:id])
   end
 
   def update
-    @place = Place.find(params[:id])
     @character = Character.find_by(user_id: current_user.id)
     if @place.characters << @character
       redirect_to places_path
     else
       render :edit
     end
+  end
+
+  def place_destroy
+    @place.destroy
+    redirect_to places_path
   end
 
   #def join
@@ -53,6 +56,10 @@ class PlacesController < ApplicationController
 
   def place_params
     params.require(:place).permit(:name, character_ids: [])
+  end
+
+  def set_place
+    @place = Place.find(params[:id])
   end
 
 end
