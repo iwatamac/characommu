@@ -20,18 +20,20 @@ class PlacesController < ApplicationController
   end
 
   def destroy
-    character = place.characters.where(user_id: current_user.id)
-    place.characters.delete(character)
+    character = @place.characters.where(user_id: current_user.id)
+    @place.characters.delete(character)
     redirect_to places_path
   end
 
   def edit
+    @characters = Character.includes(:user).where(user_id: current_user.id)
   end
 
   def update
-    @character = Character.find_by(user_id: current_user.id)
+    @characters = Character.includes(:user).where(user_id: current_user.id)
+    @character = @characters.find_by(place_params[character_ids: []])
     if @place.characters << @character
-      redirect_to places_path
+      redirect_to place_messages_path(@place)
     else
       render :edit
     end

@@ -18,7 +18,7 @@
 <div class='chat-room-form__field--right'>
         <select name="place[character_ids][]">
           <option value="">チャットする自分のキャラクターを選択してください</option>
-          <% Character.where(user_id: current_user.id).each do |character| %>
+          <% @characters.each do |character| %>
             <option value=<%= character.id %>><%= character.name %></option>
           <% end %>
         </select>
