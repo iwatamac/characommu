@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :characters
+  has_many :messages
 
   with_options presence: true do
     validates :nickname, uniqueness: { case_sensitive: false }, length: { maximum: 40 }

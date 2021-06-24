@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 root to: "tops#index"
 resources :characters do
 end
-resources :places, only: [:index, :new, :create ]
-
+resources :places, only: [:index, :new, :create, :destroy, :edit, :update ] do
+  member do
+    delete :place_destroy
+  end
+  resources :messages, only: [:index, :create]
+end
 end

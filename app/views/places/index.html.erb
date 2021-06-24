@@ -1,8 +1,10 @@
 <%= render "shared/header"%>
 
 <% @places.each do |place| %>
-<%= link_to place.name %>
+<%= link_to place.name, place_messages_path(place) %>
 <% end %>
 
 <%= link_to "部屋を作る", new_place_path, class: "new-place-btn" %>
+
+
 

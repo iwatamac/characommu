@@ -1,0 +1,42 @@
+<%= render "shared/header"%>
+
+
+<% @places.each do |place| %>
+<%= link_to place.name, place_messages_path(place) %>
+<% end %>
+<p></p>
+
+
+<% if @character.present? %>
+<%= link_to '退出する',place_path(@place), method: :delete %>
+<%= link_to '削除する',place_destroy_place_path(@place), method: :delete %>
+<% end %>
+
+<% if @character.empty? %>
+<%= link_to '参加する', edit_place_path(@place) %>
+<% end %>
+<p></p>
+
+<% @place.characters.each do |character| %>
+<%= link_to character_path(character.id) do %>
+<%= character.name %>
+<%= image_tag character.image %>
+<% end %>
+<% end %>
+
+<% if @character.present? %>
+<%= form_with model: [@place,@message], class: "", local: true do |f| %>
+  <div class="form-input">
+    <%= f.text_field :content, class: 'form-message', placeholder: 'type a message' %>
+  </div>
+  <%= f.submit '送信', class: 'form-submit' %>
+<% end %>
+<% end %>
+
+
+<% @messages.each do |message| %>
+<%= message.user.nickname %>
+<%= l message.created_at %>
+<%= message.content %>
+<p></p>
+<% end %>
