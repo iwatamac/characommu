@@ -1,31 +1,22 @@
+<head><link href="assets/sessions.scss" rel="stylesheet"></head>
+  <body class="text-center">
+    <%#form class="form-signin"%>
+    
+    <%= form_with model: @user, url: user_session_path, class: 'form-signin', local: true do |f| %>
+      <%= render 'shared/error_messages', model: @user %>
 
-<%= form_with model: @user, url: user_session_path, class: 'session-main', local: true do |f| %>
- <div class='form-wrap'>
-  <div class='form-header'>
-    <h1 class='form-header-text'>
-      会員情報入力
-    </h1>
+  <img class="mb-4" src="/assets/itiniti24.png" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">ログイン</h1>
+  <div class="mail-form">
+  <label for="メール" class="sr-only">メールアドレス</label>
+    <%= f.email_field :email, class:"form-control", id:"inpuEemail", placeholder:"メールアドレス", autofocus: true %>
+    
   </div>
-  <div class='login-flash-message'>
-    <%= flash[:notice] %>
-    <%= flash[:alert] %>
-  </div>
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">メールアドレス</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
-  </div>
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">パスワード</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.password_field :password, class:"input-default", id:"password", placeholder:"" %>
-  </div>
-  <div class='login-btn'>
-    <%= f.submit "ログイン" ,class:"login-red-btn" %>
-  </div>
-</div>
-<% end %>
+  <p></p>
+  <label for="inputPassword" class="sr-only">パスワード</label>
+  <%= f.password_field :password, class:"form-control", id:"inputPassword", placeholder:"パスワード" %>
+  <p></p>
+  <button class="btn btn-md btn-secondary btn-block" type="submit">ログイン</button>
+  <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+  <% end %>
+</body>
