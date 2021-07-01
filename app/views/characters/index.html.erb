@@ -2,30 +2,29 @@
 <%= render "shared/header"%>
  
 <%# キャラ一覧 %>
-<div class='header-character'></div>
-
+<main>
 <div class='character-contents'>
-  <h2 class='title'>キャラクターリスト</h2>
-  <ul class='character-lists'>
+  <div class='character-title-space'>
+    <h2 class='title'>キャラクターリスト</h2>
+      <%= link_to 'キャラクター作成', new_character_path, class: 'character-btn' %>
+      <%= link_to "トークしに行く", places_path, class: "character-room-btn" %>
+  </div>
 
-  <% @characters.each do |character| %>
-    <li class='list'>
-    <div class='character-img-content'>
+  <div class='character-main'>
+    <div class='character-space'>
+    <ul class='character-img-content'>
+    <% @characters.each do |character| %>  
       <%= link_to character_path(character.id) do %>
-      <%= image_tag character.image, class: "character-img" %>
-    </div>
-    <h3 class='character-name'>
+      <li><%= image_tag character.image, class: "character-img" %>
+      <h3 class='character-name'></h3>
       <%= character.name %>
-    </h3>
-    </li>
-  <% end %>
-  <% end %>
-  </ul>
+      </li>
+    <% end %>
+    <% end %>
+    </ul>
+    </div>
+  </div>
 </div>  
-
-
-
 <%# /キャラ一覧 %>
 
-<%= link_to 'キャラクター作成', new_character_path, class: 'character-btn' %>
-<%= link_to "トークしに行く", places_path, class: "character-room-btn" %>
+</main> 

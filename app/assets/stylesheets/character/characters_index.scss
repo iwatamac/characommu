@@ -2,13 +2,80 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+main {
+  z-index: 9;
+  top: 100px;
+  position: fixed;
+  width: 100vw;
+  height: calc(100vh - 100px);
+ 
+}
 
+main .character-contents {
+  /*background-color: cornflowerblue;*/
+  width: 100vw;
+  height: 100vh ;
+}
 
-.character-img {
-  width: 50vh;
-  height: 66vh;
+main .character-title-space {
+  /*background-color: darkblue;*/
+  position: relative;
+  display: flex;
+  height: 50px;
+}
+
+main .title {
+  position: absolute;
+  font-size: 30px;
+  color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+main .character-main {
+  position: relative;
+  /*background-color: chocolate;*/
+  height: calc(100vh - 130px);
+  
+}
+
+main .character-space {
+  /*background-color: crimson;*/
+  height: calc(100vh - 130px);
+  width: 80vw;
+  right: 10%;
+  position: absolute;
+  overflow-y: scroll;
+}
+
+main .character-img-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center; 
+}
+
+main .character-img {
+  width: 25vw;
+  height: 70vh;
+  margin-top: 20px;
+  
 }
 
 .character-name {
-  font-size: 2.5vh;
+  font-size: 10%;
+}
+
+main .character-btn {
+  position: absolute;
+  right: 300px;
+  top: 10px;
+ 
+}
+
+main .character-room-btn {
+  position: absolute;
+  right: 150px;
+  top: 10px;
 }
