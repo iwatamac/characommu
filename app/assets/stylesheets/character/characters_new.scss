@@ -1,0 +1,43 @@
+.main-new {
+  z-index: 2;
+  top: 100px;
+  width: 100vw;
+  height: 100vh ;
+  position: relative;
+  /*background-color: cadetblue;*/
+  overflow-y: scroll;
+}
+
+.character-new {
+  /*background-color: brown;*/
+  height: 100vh ;
+  width: 80vw;
+  position: absolute;
+  right: 10%;
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+  z-index: 9;
+}
+
+.charaform-new {
+  /*background-color: coral;*/
+  width: 22vw;
+  height: 100vh;
+  position: absolute;
+  text-align: center;
+}
+
+.form-header-text {
+  font-size: 24px;
+  margin: 10px;
+  margin-bottom: 45px;
+}
+
+.form-control-newchara {
+  margin-top: 4vh;
+}
+
+.new-btn {
+  margin-top: 7vh;
+}
