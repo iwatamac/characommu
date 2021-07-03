@@ -1,10 +1,32 @@
-<%= render "shared/header"%>
+<link href="assets/places_index.scss" rel="stylesheet">
 
-<% @places.each do |place| %>
-<%= link_to place.name, place_messages_path(place) %>
-<% end %>
+<div class="wrapper">
+  <div class="side-bar">
+    <div class="side-bar-header">
+    <div class="header-name">
+      <a href="/users/264/edit">iwa</a>
+    </div>
+    <%= link_to "部屋を作る", new_place_path, class: "create-room" %>
+    </div> 
 
-<%= link_to "部屋を作る", new_place_path, class: "new-place-btn" %>
+  <div class="rooms">
+    <div class="room">
+    <% @places.each do |place| %>
+      <div class="room-name">
+    <%= link_to place.name, place_messages_path(place) %>
+      </div>
+    <p></p>
+    <% end %>
+    </div>  
+  </div>
+  </div> 
+</div>
+
+
+
+
+
+
 
 
 

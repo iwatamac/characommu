@@ -1,0 +1,42 @@
+// Place all the styles related to the places controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.wrapper {
+  display: flex;
+}
+
+.side-bar {
+  width: 200px;
+  height: 100vh;
+}
+
+.side-bar-header {
+  height: 100px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-room {
+  font-size: 12px;
+}
+
+.rooms {
+  background-color: lightgray;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+  overflow: scroll;
+}
+
+.room {
+  padding: 20px 0 40px;
+}
+
+.room-name {
+  margin-bottom: 40px;
+}
+
+
+

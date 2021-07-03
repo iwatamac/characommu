@@ -1,30 +1,41 @@
+<link href="assets/characters_edit.scss" rel="stylesheet">
 <%= render "shared/header"%>
-
+<div class="main-show">
 <%# 商品の概要 %>
-<div class="character-show">
-  <div class="character-img-content">
+ <div class="character-show">
+  <div class="character-img-content-show">
       <%= image_tag @character.image, class:"character-box-img" %>
+      <%# 編集と削除ページの実装 %>
+      <div class="character-btn-show">
+      <% if user_signed_in? %>
+      <% if current_user.id == @character.user_id %>
+      <%= link_to "編集", edit_character_path(@character.id), class: "character-edit-btn" %>
+      <%= link_to "削除", character_path, method: :delete, class: "character-delete-btn" %>
+      <% end %>
+      <% end %>
+      </div>
   </div>
-  <div class="character-name-content">
-    <h2 class="name">
-      <%= @character.name %>
-    </h2>
-  </div>  
-  <div class="character-residence">
-    <%= @character.residence %>
-  </div>    
-  <div class="character-gender">
-    <%= @character.gender.name %> 
-  </div>
-  <div class="character-introductions">
-    <%= @character.introductions %> 
-  </div>  
-</div>  
-
-<%# 編集と削除ページの実装 %>
-<% if user_signed_in? %>
-<% if current_user.id == @character.user_id %>
-<%= link_to "編集", edit_character_path(@character.id), class: "character-edit-btn" %>
-<%= link_to "削除", character_path, method: :delete, class: "character-delete-btn" %>
-<% end %>
-<% end %>
+  <div class="table-field-show">
+  <table class="character-table">
+    <tbody>
+    <tr>
+      <th class="detail-character">名前</th>
+      <td class="detail-value"><%= @character.name %></td>
+    </tr>
+    <tr>  
+      <th class="detail-character">出身</th>
+      <td class="detail-value"><%= @character.residence %></td>
+    </tr>
+    <tr>
+      <th class="detail-character">性別</th>      
+      <td class="detail-value"><%= @character.gender.name %></td> 
+    </tr>
+    <tr>
+      <th class="detail-character">自己紹介</th>  
+      <td class="detail-value"><%= @character.introductions %></td> 
+    </tr>
+    </tbody>
+  </table>
+  </div>   
+ </div> 
+</div>

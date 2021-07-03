@@ -1,6 +1,5 @@
-<link href="assets/characters_edit.css" rel="stylesheet">
 <%= render "shared/header"%>
-
+<main>
 <%= form_with model: @character, class: 'registration-main', local: true do |f| %>
   
   <div class='form-wrap'>
@@ -51,5 +50,5 @@
   <div class="">
       <%= f.submit "編集する" ,class:"sell-btn" %>
     </div>
-
 <% end %>
+</main>

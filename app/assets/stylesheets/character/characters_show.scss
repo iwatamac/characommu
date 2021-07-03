@@ -1,0 +1,104 @@
+.main-show {
+  z-index: 2;
+  top: 100px;
+  width: 100vw;
+  height: 100vh ;
+  position: fixed;
+  /*background-color: cadetblue;*/
+}
+
+.character-show {
+  /*background-color: brown;*/
+  height: 100vh ;
+  width: 80vw;
+  position: absolute;
+  right: 10%;
+  display: flex;
+  justify-content: space-between;
+  overflow-y: scroll;
+  z-index: 9;
+}
+
+.character-img-content-show {
+  /*background-color: burlywood;*/
+  z-index: 2;
+  height: 100vh;
+  width: 35vw;
+  left: auto;
+  position: relative;
+}
+
+.character-box-img {
+  height: 70vh;
+  width: 25vw;
+  position: absolute;
+  left: 4vw;
+  top: 4vh;
+}
+
+.character-btn-show {
+  /*background-color: indianred;*/
+  position: absolute;
+  height: 7vh;
+  width: 15vw;
+  left: 9vw;
+  z-index: 3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  bottom: 120px;
+}
+
+.character-edit-btn {
+  font-size: 17px;
+  margin-left: 10px;
+}
+
+.character-delete-btn {
+  font-size: 17px;
+  margin-right: 10px;
+}
+
+.table-field-show {
+  /*background-color: blueviolet;*/
+  z-index: 2;
+  height: 100vh;
+  width: 45vw;
+  position: relative;
+}
+
+.character-table {
+  z-index: 2;
+  height: 45vh;
+  width: 45vw;
+  top: 4vh;
+  position: absolute;
+  right: auto;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.detail-character {
+  width: 20%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
+    padding: 20px;
+    border: 1px solid #dedede;
+    font-size: 14px;
+}
