@@ -1,0 +1,145 @@
+// Place all the styles related to the messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div {
+  display: block;
+}
+
+.chat {
+  /*background-color:coral;*/
+  width: calc(100% - 200px);
+  height: 100vh;
+}
+
+.chat-header {
+  height: 100px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  /*background-color: cornflowerblue;*/
+}
+
+.header-title {
+  color: #333;
+  font-size: 24px;
+  margin-top: 36px;
+}
+
+.header-button {
+  margin-top: 36px;
+
+}
+
+.header-right {
+  margin-top: 36px;
+  margin-left: 64vw;
+}
+
+.header-taisyutu {
+  margin-right: 20px;
+}
+
+.header-left {
+  margin-top: 36px;
+  margin-left: 70vw;
+}
+
+.header-join {
+  font-size: 18px;
+}
+
+.messages {
+  background-color: #FAFAFA;
+  height: calc(100vh - 100px - 80px);
+  padding: 46px 40px 0;
+  overflow: scroll;
+}
+
+.message {
+  margin: 10px 0 0 0;
+  /*background-color: crimson;*/
+  height: 100vh;
+  position: relative;
+}
+
+.image-messages {
+  /*background-color: darkgoldenrod;*/
+  display: flex;
+  justify-content: space-between;
+  height: 45vh;
+  padding-right: 17.5vw;
+  padding-left: 3vw;
+}
+
+.image-message {
+  height: 40vh;
+  width: 15vw;
+  position: fixed;
+}
+
+.image-name {
+  font-size: 15px;
+  top: 65vh;
+  position: fixed;
+}
+
+.upper-message {
+  display: flex;
+  margin-left: 30vw;
+}
+
+.message-user {
+  color: #434a54;
+  font-size: 15px;
+}
+
+.message-date {
+  color: #999;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.lower-message {
+  margin-top: 10px;
+  margin-left: 30vw;
+}
+
+.message-content {
+  color: #434a54;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.form {
+  background-color: #DDDDDD;
+  height: 80px;
+  padding: 20px 40px;
+  display: flex;
+}
+
+.form-input {
+  background-color: white;
+  display: flex;
+  width: 100%;
+}
+
+.form-message {
+  border: none;
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.form-submit {
+  background-color: #38AEF0;
+  border: none;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 20px;
+}
+
+
+
