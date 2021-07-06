@@ -1,45 +1,42 @@
-<%= render 'shared/error_messages', model: @place %>
+<link href="assets/characters_new.scss" rel="stylesheet">
+<%= render "shared/header"%>
 
-<div class='chat-room-form'>
-  <h1>新規チャットルーム</h1>
-  <%=form_with model: @place, local: true do |f|%>
-    <div class='chat-room-form__field'>
-      <div class='chat-room-form__field--left'>
-        <%= f.label :チャットルーム名, class: 'chat-room-form__label'%>
-      </div>
-      <div class='chat-room-form__field--right'>
-        <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: 'チャットルーム名を入力してください'%>
-      </div>
+<div class="main-new">
+  <div class="character-new">
+    <div class="charaform-new">      
+    <%= form_with model: @place, local: true do |f| %>
+  
+    <h1 class='form-header-text'>場所をつくる</h1>
+    <p></p>
+    <%= render 'shared/error_messages', model: @place %>
+
+  <div class="form-group">
+    <div class="nickname-form">
+      <label for="名前" class="sr-only">名前</label>
+      <%= f.text_area :name, class:"form-control form-control-newchara", id:"character-name", placeholder:"場所の名前を入力してください" %>
+    <p></p> 
     </div>
-    <div class='chat-room-form__field'>
-    </div>
-    <div class='chat-room-form__field'>
-      <div class='chat-room-form__field--left'>
-        <label class='chat-room-form__label' for='chat_room_チャットメンバー'>チャットメンバー</label>
-      </div>
-      <div class='chat-room-form__field--right'>
-        <select name="place[character_ids][]">
+      <label for="自分のキャラ" class="sr-only">性別</label>
+      <select name="place[character_ids][]" class="form-control">
           <option value="">チャットする自分のキャラクターを選択してください</option>
           <% Character.where(user_id: current_user.id).each do |character| %>
             <option value=<%= character.id %>><%= character.name %></option>
           <% end %>
         </select>
         <p></p>
-        <select name="place[character_ids][]">
+        <select name="place[character_ids][]" class="form-control">
           <option value="">チャットするキャラクターを選択してください</option>
           <% Character.where.not(user_id: current_user.id).each do |character| %>
             <option value=<%= character.id %>><%= character.name %></option>
           <% end %>
         </select>
-        
-        <%#<input name="place[character_ids][]" type="hidden" value=<%= @user.character.id %> 
+        <div class="">
+        <%= f.submit "作成する", class:"btn btn-md btn-secondary btn-block new-btn" %>
+        </div>
+        <% end %>
       </div>
     </div>
-    <div class='chat-room-form__field'>
-      <div class='chat-room-form__field--left'></div>
-      <div class='chat-room-form__field--right'>
-        <%= f.submit class: 'chat-room-form__action-btn'%>
-      </div>
-    </div>
-  <% end %>
-</div>
+  </div>
+
+
+
