@@ -34,19 +34,30 @@ div {
 .header-right {
   margin-top: 36px;
   margin-left: 64vw;
+  
 }
 
 .header-taisyutu {
   margin-right: 20px;
+  width: 38%;
+  height: 45%;
+}
+
+.header-sakujo {
+  width: 38%;
+  height: 45%;
 }
 
 .header-left {
   margin-top: 36px;
-  margin-left: 70vw;
+  margin-left: 64vw;
+
 }
 
 .header-join {
-  font-size: 18px;
+  width: 45%;
+  height: 45%;
+  margin-left: 40%;
 }
 
 .messages {

@@ -18,16 +18,15 @@ main .character-contents {
 }
 
 main .character-title-space {
-  /*background-color: darkblue;*/
+background-color: lightblue;
   position: relative;
   display: flex;
-  height: 50px;
+  height: 60px;
 }
 
 main .title {
   position: absolute;
-  font-size: 30px;
-  color: black;
+  width: 20%;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -35,14 +34,14 @@ main .title {
 
 main .character-main {
   position: relative;
-  /*background-color: chocolate;*/
+  background-color: lightgray;
   height: calc(100vh - 130px);
   
 }
 
 main .character-space {
-  /*background-color: crimson;*/
-  height: calc(100vh - 130px);
+  background-color: #FFFFFF;
+  height: calc(100vh - 150px);
   width: 80vw;
   right: 10%;
   position: absolute;
@@ -69,13 +68,17 @@ main .character-img {
 
 main .character-btn {
   position: absolute;
+  width: 8%;
+  height: 40%;
   right: 300px;
-  top: 10px;
+  top: 17px;
  
 }
 
 main .character-room-btn {
   position: absolute;
+  width: 8%;
+  height: 40%;
   right: 150px;
-  top: 10px;
+  top: 17px;
 }

@@ -3,10 +3,16 @@
 
 <div class="main-new">
   <div class="character-new">
+    <%= image_tag("chara_men.jpg", class: "character-header") %>
+    <%= image_tag("chara_lobo.jpg", class: "character-header2") %>
+    <%= image_tag("chara_oni.jpg", class: "character-header3") %>
+    <%= image_tag("chara_devil.jpg", class: "character-header4") %>
+    <%= image_tag("chara_cat.jpg", class: "character-header5") %>
+    <%= image_tag("chara_kaijuu.jpg", class: "character-header6") %>
     <div class="charaform-new">      
     <%= form_with model: @character, url: characters_path, class: 'form-new', local: true do |f| %>
   
-    <h1 class='form-header-text'>キャラクター情報入力</h1>
+    <%= image_tag "chara_jouhou", class:"form-header-text form-header-text_image" %>
     <p></p>
     <%= render 'shared/error_messages', model: @character %>
 
@@ -44,9 +50,7 @@
      <%= f.text_area :introductions, class:"form-control form-control-newchara", id:"phone_number", placeholder:"自己紹介を入力してください" %>
   </div>
 
-  <div class="">
-    <%= f.submit "作成する", class:"btn btn-md btn-secondary btn-block new-btn" %>
-  </div>
+    <%= image_submit_tag "sakusei_btn", class:"sakusei_btn" %>
 <% end %>
     </div>
   </div>

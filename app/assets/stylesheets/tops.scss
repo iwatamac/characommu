@@ -21,34 +21,42 @@ header .container-fuild {
 
 .title-tops {
   width: 60%;
-  height: 60%;
-  left: 300px;
-  top: 150px;
+  height: 100%;
+  left: 350px;
+  top: 0px;
   position: absolute;
-  background-color: chocolate;
+  z-index: 5
+}
+
+.haikei-tops {
+  width: 170%;
+  height: 200%;
+  position: absolute;
+  bottom: 0px;
+
 }
 
 header .login-tops {
   z-index: 20;
-  width: 10%;
-  height: 60%;
+  width: 8%;
+  height: 40%;
   right: 300px;
   position: absolute;
   top: 30px;
 }
 
 header .registration-tops {
-  width: 10%;
-  height: 60%;
-  right: 100px;
+  width: 8%;
+  height: 40%;
+  right: 140px;
   position: absolute;
   top: 30px;
 }
 
 header .logout-tops {
-  width: 10%;
-  height: 60%;
-  right: 100px;
+  width: 8%;
+  height: 40%;
+  right: 140px;
   position: absolute;
   top: 30px;
 }
@@ -57,10 +65,79 @@ header .user-nickname-tops {
   z-index: 2;
   width: 10%;
   height: 60%;
-  right: 150px;
+  right: 200px;
   position: absolute;
-  top: 30px;
+  top: 50px;
 }
+
+@keyframes moving {
+  100% {transform: translateX(-960px)};
+}
+
+.moving {
+  animation: moving 10s linear infinite;
+}
+
+.mocchiri {
+  animation: mocchiri 3s infinite;
+}
+@keyframes mocchiri {
+  0% {
+      transform: scale(1, 0.8);
+  }
+  20% {
+      transform: scale(0.8, 1.1);
+  }
+  95% {
+      transform: scale(1, 1);
+  }
+  100% {
+      transform: scale(1, 0.8);
+  }
+}
+
+.bururi {
+  animation: bururi 1s infinite;
+}
+@keyframes bururi {
+  50% {
+      transform: scale(1, 1);
+  }
+  52% {
+      transform: scale(0.98, 0.95)
+  }
+  54% {
+      transform: scale(1, 1);
+  }
+  56% {
+      transform: scale(0.98, 0.95)
+  }
+  58% {
+      transform: scale(1, 1);
+  }
+  60% {
+      transform: scale(0.98, 0.95)
+  }
+}
+
+.dokidoki {
+  animation: dokidoki 1.5s infinite;
+}
+@keyframes dokidoki {
+  0% {
+      transform: scale(1.05)
+  }
+  5% {
+      transform: scale(1)
+  }
+  95% {
+      transform: scale(1)
+  }
+  100% {
+      -webkit-transform: scale(1.25)
+  }
+}
+
 /*.header-tops {
   width: 100vw;
   height: 30vh;

@@ -4,15 +4,15 @@
     <div class="chat-header">
       <% if @character.empty? %>
       <div class="header-left">
-      <%= link_to '参加する', edit_place_path(@place), class:"header-join" %>
+      <%= link_to image_tag('sanka_btn.jpg', class:"header-join"),edit_place_path(@place) %>
       <p></p>
       </div>
       <% end %>
 
       <% if @character.present? %>
         <div class="header-right">
-      <%= link_to '退出する',place_path(@place), class:"header-taisyutu", method: :delete %>
-      <%= link_to '削除する',place_destroy_place_path(@place), method: :delete %>
+      <%= link_to image_tag('taisyutu_btn.jpg', class: "header-taisyutu"),place_path(@place), method: :delete %>
+      <%= link_to image_tag('sakujo_btn.jpg', class: "header-sakujo"), place_destroy_place_path(@place), method: :delete %>
         </div>
       <% end %>
     </div>

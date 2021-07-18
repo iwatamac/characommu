@@ -1,33 +1,35 @@
  <head><link href="assets/registrations.scss" rel="stylesheet"></head>
-  <body class="text-center">
+  
+   <%= image_tag "characommu_haikei2.jpg", class: "haikei-registrations moving" %>
+   <body class="text-center">
     <%#form class="form-signin"%>
-    
+   
     <%= form_with model: @user, url: user_registration_path, class: 'form-signin', local: true do |f| %>
       <%= render 'shared/error_messages', model: @user %>
-  <img class="mb-4" src="/assets/itiniti24.png" alt="" width="72" height="72">
-  <h1 class="h4 mb-3 font-weight-normal">会員登録</h1>
-
+  
+  
   <div class="nickname-form">
+  <%= image_tag("regstration.jpg", class: "registration-tops") %>
   <label for="ニックネーム" class="sr-only">ニックネーム</label>
-   <%= f.text_area :nickname, class:"form-control", id:"nickname", placeholder:"ニックネーム" %>
+  <%= f.text_area :nickname, class:"form-control slidein", id:"nickname", placeholder:"ニックネーム" %>
   </div>
   <p></p>
   
   <div class="mail-form">
   <label for="メール" class="sr-only">メールアドレス</label>
-    <%= f.email_field :email, class:"form-control", id:"inpuEemail", placeholder:"メールアドレス", autofocus: true %>
+    <%= f.email_field :email, class:"form-control slidein", id:"inpuEemail", placeholder:"メールアドレス", autofocus: true %>
   </div>
   <p></p>
 
   <label for="inputPassword" class="sr-only">パスワード</label>
-  <%= f.password_field :password, class:"form-control", id:"inputPassword", placeholder:"パスワード" %>
+  <%= f.password_field :password, class:"form-control slidein", id:"inputPassword", placeholder:"パスワード" %>
   <p></p>
 
   <label for="inputPassword" class="sr-only">パスワード確認</label>
-  <%= f.password_field :password_confirmation, class:"form-control", id:"password-confirmation", placeholder:"パスワード(確認)" %>
+  <%= f.password_field :password_confirmation, class:"form-control slidein", id:"password-confirmation", placeholder:"パスワード(確認)" %>
   <p></p>
 
-<div class='input-birth-wrap'>
+<div class='input-birth-wrap slidein'>
   <%= raw sprintf(
                   f.date_select(
                     :birthday,
@@ -42,7 +44,7 @@
 </div>
 
 
-  <%= f.phone_field :phone_number, class:"form-control", id:"phone_number", placeholder:"電話番号" %>
+  <%= f.phone_field :phone_number, class:"form-control slidein", id:"phone_number", placeholder:"電話番号" %>
 </div>
 <p></p>
 

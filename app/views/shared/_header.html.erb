@@ -1,11 +1,12 @@
 <header>
 <div class= "container-fuild">
+
 <% if user_signed_in? %>
- <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout-tops" %>
+ <%= link_to image_tag('logout.jpg', class: "logout-tops"),destroy_user_session_path, method: :delete %>
  <%= link_to current_user.nickname, characters_path, class: "user-nickname-tops" %>
 <% else %> 
- <%= link_to image_tag("login.jpg", class: "login-tops"),new_user_session_path %>
- <%= link_to image_tag("regstration.jpg", class: "registration-tops"),new_user_registration_path %>
+ <%= link_to image_tag("login.jpg", class: "login-tops dokidoki"),new_user_session_path %>
+ <%= link_to image_tag("regstration.jpg", class: "registration-tops dokidoki"),new_user_registration_path %>
 <% end %>
  <div>
  </header>
