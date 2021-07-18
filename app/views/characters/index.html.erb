@@ -5,9 +5,9 @@
 <main>
 <div class='character-contents'>
   <div class='character-title-space'>
-    <h2 class='title'>キャラクターリスト</h2>
-      <%= link_to 'キャラクター作成', new_character_path, class: 'character-btn' %>
-      <%= link_to "トークしに行く", places_path, class: "character-room-btn" %>
+    <%= image_tag "characterrist-remove.png", class: "title" %>
+      <%= link_to image_tag('chara_sakusei.jpg', class: 'character-btn'), new_character_path %>
+      <%= link_to image_tag("talk.jpg", class: "character-room-btn"), places_path %>
   </div>
 
   <div class='character-main'>

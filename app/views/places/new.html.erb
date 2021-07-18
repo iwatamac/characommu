@@ -6,7 +6,7 @@
     <div class="charaform-new">      
     <%= form_with model: @place, local: true do |f| %>
   
-    <h1 class='form-header-text'>場所をつくる</h1>
+    <%= image_tag "basyo_sakusei.jpg", class:"form-header-text form-header-text_image" %>
     <p></p>
     <%= render 'shared/error_messages', model: @place %>
 
@@ -31,7 +31,7 @@
           <% end %>
         </select>
         <div class="">
-        <%= f.submit "作成する", class:"btn btn-md btn-secondary btn-block new-btn" %>
+        <%= image_submit_tag "sakusei_btn", class:"sakusei_btn" %>
         </div>
         <% end %>
       </div>

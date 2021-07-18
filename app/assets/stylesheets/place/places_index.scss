@@ -17,10 +17,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .create-room {
-  font-size: 12px;
+  position: absolute;
+  width: 45%;
+  height: 33%;
+  right: 1vw;
+  bottom: 5vh;
+}
+
+.header-name {
+  
 }
 
 .rooms {

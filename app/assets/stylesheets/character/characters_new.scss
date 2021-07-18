@@ -4,12 +4,12 @@
   width: 100vw;
   height: 100vh ;
   position: relative;
-  /*background-color: cadetblue;*/
+  background-color: lightgray;
   overflow-y: scroll;
 }
 
 .character-new {
-  /*background-color: brown;*/
+  background-color: white;
   height: 100vh ;
   width: 80vw;
   position: absolute;
@@ -28,10 +28,11 @@
   text-align: center;
 }
 
-.form-header-text {
+.form-header-text_image {
   font-size: 24px;
   margin: 10px;
-  margin-bottom: 45px;
+  margin-bottom: 35px;
+  width: 100%;
 }
 
 .form-control-newchara {
@@ -40,4 +41,64 @@
 
 .new-btn {
   margin-top: 7vh;
+}
+
+.sakusei_btn {
+  height: 15%;
+  width: 40%;
+  margin-top: 30px;
+}
+
+.character-header {
+  width: 5%;
+  height: 20%;
+  position: absolute;
+  top: 30px;
+  right: 330px;
+ 
+}
+
+.character-header2 {
+  width: 5%;
+  height: 20%;
+  position: absolute;
+  top: 30px;
+  left: 330px;
+ 
+}
+
+.character-header3 {
+  width: 5%;
+  height: 20%;
+  position: absolute;
+  top: 30px;
+  left: 240px;
+  
+}
+
+.character-header4 {
+  width: 5%;
+  height: 20%;
+  position: absolute;
+  top: 30px;
+  right: 130px;
+
+}
+
+.character-header5 {
+  width: 5%;
+  height: 20%;
+  position: absolute;
+  top: 30px;
+  left: 150px;
+ 
+}
+
+.character-header6 {
+  width: 8%;
+  height: 20%;
+  position: absolute;
+  top: 30px;
+  right: 210px;
+ 
 }
