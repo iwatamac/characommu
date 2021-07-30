@@ -81,6 +81,7 @@ header .user-nickname-tops {
 .mocchiri {
   animation: mocchiri 3s infinite;
 }
+
 @keyframes mocchiri {
   0% {
       transform: scale(1, 0.8);
@@ -138,6 +139,30 @@ header .user-nickname-tops {
   }
 }
 
+.slidein {
+  animation: slidein 0.5s cubic-bezier(0.25, 0.5, 0.5, 1) 1 forwards;
+}
+
+.slidein_2 {
+  animation: slidein 1s cubic-bezier(0.25, 0.5, 0.5, 1) 1 forwards;
+}
+
+.slidein_3 {
+  animation: slidein 2s cubic-bezier(0.25, 0.5, 0.5, 1) 1 forwards;
+}
+ 
+@keyframes slidein {
+  0% {
+    transform: translateX(180px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+  }
+  90%,100% {
+    opacity: 1;
+  }
+}
 /*.header-tops {
   width: 100vw;
   height: 30vh;

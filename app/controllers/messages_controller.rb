@@ -8,6 +8,7 @@ class MessagesController < ApplicationController
     @character = @place.characters.where(user_id: current_user.id)
     @characters = Character.includes(:user)
     @messages = @place.messages.includes(:user)
+    #@messagess = {user_id: current_user.id, }
   end
 
   def create
@@ -28,4 +29,6 @@ class MessagesController < ApplicationController
   def message_params
     params.require(:message).permit(:content).merge(user_id: current_user.id,)
   end
+
+
 end

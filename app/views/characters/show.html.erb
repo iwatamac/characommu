@@ -4,7 +4,7 @@
 <%# 商品の概要 %>
  <div class="character-show">
   <div class="character-img-content-show">
-      <%= image_tag @character.image, class:"character-box-img" %>
+      <%= image_tag @character.image, class:"character-box-img mocchiri " %>
       <%# 編集と削除ページの実装 %>
       <div class="character-btn-show">
       <% if user_signed_in? %>
@@ -16,23 +16,23 @@
       </div>
   </div>
   <div class="table-field-show">
-  <table class="character-table">
+  <table class="character-table slidein">
     <tbody>
     <tr>
       <th class="detail-character">名前</th>
-      <td class="detail-value"><%= @character.name %></td>
+      <td class="detail-value slidein"><%= @character.name %></td>
     </tr>
     <tr>  
       <th class="detail-character">出身</th>
-      <td class="detail-value"><%= @character.residence %></td>
+      <td class="detail-value slidein"><%= @character.residence %></td>
     </tr>
     <tr>
       <th class="detail-character">性別</th>      
-      <td class="detail-value"><%= @character.gender.name %></td> 
+      <td class="detail-value slidein"><%= @character.gender.name %></td> 
     </tr>
     <tr>
       <th class="detail-character">自己紹介</th>  
-      <td class="detail-value"><%= @character.introductions %></td> 
+      <td class="detail-value slidein"><%= @character.introductions %></td> 
     </tr>
     </tbody>
   </table>
