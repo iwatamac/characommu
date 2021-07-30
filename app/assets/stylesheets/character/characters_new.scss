@@ -4,7 +4,7 @@
   width: 100vw;
   height: 100vh ;
   position: relative;
-  background-color: lightgray;
+  /*background-color: lightgray;*/
   overflow-y: scroll;
 }
 
@@ -54,7 +54,7 @@
   height: 20%;
   position: absolute;
   top: 30px;
-  right: 330px;
+  left: 330px;
  
 }
 
@@ -63,7 +63,7 @@
   height: 20%;
   position: absolute;
   top: 30px;
-  left: 330px;
+  right: 330px;
  
 }
 
@@ -71,8 +71,8 @@
   width: 5%;
   height: 20%;
   position: absolute;
-  top: 30px;
-  left: 240px;
+  top: 200px;
+  right: 220px;
   
 }
 
@@ -89,8 +89,8 @@
   width: 5%;
   height: 20%;
   position: absolute;
-  top: 30px;
-  left: 150px;
+  top: 200px;
+  right: 320px;
  
 }
 
@@ -99,6 +99,49 @@
   height: 20%;
   position: absolute;
   top: 30px;
-  right: 210px;
- 
+  left: 310px;
+}
+
+.cover {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 10;
+  position: absolute;
+}
+
+.fadeout {
+  animation: fadeout;
+}
+
+.hensyuu_rinkaku {
+  width: 9%;
+  height: 18%;
+  position: absolute;
+  left: 280px;
+  top: 15px;
+}
+
+.hensyuu_face {
+  width: 6%;
+  height: 9%;
+  position: absolute;
+  left: 296px;
+  top: 55px;
+}
+
+.hensyuu_face2 {
+  width: 6%;
+  height: 9%;
+  position: absolute;
+  left: 296px;
+  top: 57px;
+}
+
+.hensyuu_face3 {
+  width: 6%;
+  height: 9%;
+  position: absolute;
+  left: 299px;
+  top: 60px;
 }

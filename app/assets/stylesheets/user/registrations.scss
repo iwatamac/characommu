@@ -100,23 +100,6 @@ body {
   bottom: 0px;
 }
 
-.slidein {
-  animation: slidein 0.5s cubic-bezier(0.25, 0.5, 0.5, 1) 1 forwards;
-}
- 
-@keyframes slidein {
-  0% {
-    transform: translateX(180px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-  }
-  90%,100% {
-    opacity: 1;
-  }
-}
-
 .kakomi-te1 {
   margin: 2em auto; 
   padding: 1em 1.5em;

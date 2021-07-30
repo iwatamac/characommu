@@ -5,17 +5,17 @@
 <main>
 <div class='character-contents'>
   <div class='character-title-space'>
-    <%= image_tag "characterrist-remove.png", class: "title" %>
-      <%= link_to image_tag('chara_sakusei.jpg', class: 'character-btn'), new_character_path %>
-      <%= link_to image_tag("talk.jpg", class: "character-room-btn"), places_path %>
+    <%= image_tag "characterrist-remove.png", class: "title mocchiri" %>
+      <%= link_to image_tag('chara_sakusei.jpg', class: 'character-btn dokidoki', id: 'target'), new_character_path %>
+      <%= link_to image_tag("talk.jpg", class: "character-room-btn dokidoki"), places_path %>
   </div>
 
   <div class='character-main'>
     <div class='character-space'>
-    <ul class='character-img-content'>
+    <ul class='character-img-content', id="nav4">
     <% @characters.each do |character| %>  
       <%= link_to character_path(character.id) do %>
-      <li><%= image_tag character.image, class: "character-img" %>
+      <li><%= image_tag character.image, class: "character-img slidein" %>
       <h3 class='character-name'></h3>
       <%= character.name %>
       </li>

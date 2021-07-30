@@ -18,30 +18,30 @@ main .character-contents {
 }
 
 main .character-title-space {
-background-color: lightblue;
+/*background-color: lightblue;*/
   position: relative;
   display: flex;
-  height: 60px;
+  height: 80px;
 }
 
 main .title {
   position: absolute;
   width: 20%;
-  top: 50%;
-  left: 50%;
+  top: 10%;
+  left: 40%;
   transform: translate(-50%,-50%);
 }
 
 main .character-main {
   position: relative;
-  background-color: lightgray;
+  /*background-color: lightgray;*/
   height: calc(100vh - 130px);
   
 }
 
 main .character-space {
   background-color: #FFFFFF;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 180px);
   width: 80vw;
   right: 10%;
   position: absolute;
@@ -56,10 +56,13 @@ main .character-img-content {
 }
 
 main .character-img {
-  width: 25vw;
-  height: 70vh;
-  margin-top: 20px;
-  
+  width: 17.5vw;
+  height: 50vh;
+  margin-top: 50px;
+}
+
+main .character-img:hover {
+  filter: opacity(40%);
 }
 
 .character-name {

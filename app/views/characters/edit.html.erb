@@ -1,8 +1,13 @@
  <link href="assets/characters_new.scss" rel="stylesheet">
+ 
 <%= render "shared/header"%>
 
 <div class="main-new">
   <div class="character-new">
+  <%= image_tag "hensyuu_rinkaku.png", class: 'hensyuu_rinkaku' %>
+  <%= image_tag "hensyuu_face1.png", class: 'hensyuu_face hensyuu_second hensyuu_second_out' %>
+  <%= image_tag "hensyuu_face2.png", class: 'hensyuu_face2 first first_out' %>
+  <%= image_tag "hensyuu_face3.png", class: 'hensyuu_face3 hensyuu_third hensyuu_third_out' %>
     <div class="charaform-new">      
     <%= form_with model: @character, class: 'form-new', local: true do |f| %>
   
@@ -13,25 +18,25 @@
     
     <div class="img-upload">
       <div class="form-group">
-        <%= f.file_field :image, class:"form-control-file", id:"character-image" %>
+        <%= f.file_field :image, class:"form-control-file slidein", id:"character-image" %>
       </div>
     </div>
   <div class="form-group">
     <div class="nickname-form">
       <label for="名前" class="sr-only">名前</label>
-      <%= f.text_area :name, class:"form-control form-control-newchara", id:"character-name", placeholder:"名前" %>
+      <%= f.text_area :name, class:"form-control form-control-newchara slidein", id:"character-name", placeholder:"名前" %>
     <p></p> 
   </div>
   <div class="form-group">
     <div class="nickname-form">
       <label for="出身" class="sr-only">出身</label>
-      <%= f.text_area :residence, class:"form-control form-control-newchara", id:"residence", placeholder:"出身", autofocus: true %>
+      <%= f.text_area :residence, class:"form-control form-control-newchara slidein", id:"residence", placeholder:"出身", autofocus: true %>
     </div>
     <p></p> 
   </div>
     
   <div class="form-group">
-    <div class="nickname-form">
+    <div class="nickname-form slidein">
     <%#<div class="h5 mb-3 font-weight-normal">性別</div>%>
       <label for="性別" class="sr-only">性別</label>
     <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"form-control form-control-newchara", id:"gender", placeholder:"出身"}) %>
@@ -41,11 +46,11 @@
   <div class="form-group">
     <div class="nickname-form">
       <label for="自己紹介" class="sr-only">自己紹介</label>
-     <%= f.text_area :introductions, class:"form-control form-control-newchara", id:"phone_number", placeholder:"自己紹介を入力してください" %>
+     <%= f.text_area :introductions, class:"form-control form-control-newchara slidein", id:"phone_number", placeholder:"自己紹介を入力してください" %>
   </div>
 
   <div class="">
-    <%= image_submit_tag "hensyuu_btn.jpg", class:"sakusei_btn" %>
+    <%= image_submit_tag "hensyuu_btn.jpg", class:"sakusei_btn", id:"hensyuu" %>
   </div>
 <% end %>
     </div>
