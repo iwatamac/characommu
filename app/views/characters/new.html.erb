@@ -20,36 +20,36 @@
 
     
     <div class="img-upload">
-      <div class="form-group">
+      <div class="form-group text-secondary wf-mplus1p">
         <%= f.file_field :image, class:"form-control-file slidein", id:"character-image" %>
       </div>
     </div>
   <div class="form-group">
-    <div class="nickname-form">
+    <div class="nickname-form text-secondary wf-mplus1p">
       <label for="名前" class="sr-only">名前</label>
-      <%= f.text_area :name, class:"form-control form-control-newchara slidein", id:"character-name", placeholder:"名前" %>
+      <%= f.text_area :name, class:"form-control-newchara kakomi-te2 slidein", id:"character-name", placeholder:"名前" %>
     <p></p> 
   </div>
   <div class="form-group">
-    <div class="nickname-form">
+    <div class="nickname-form text-secondary wf-mplus1p">
       <label for="出身" class="sr-only">出身</label>
-      <%= f.text_area :residence, class:"form-control form-control-newchara slidein", id:"residence", placeholder:"出身", autofocus: true %>
+      <%= f.text_area :residence, class:"form-control-newchara kakomi-te2 slidein", id:"residence", placeholder:"出身", autofocus: true %>
     </div>
     <p></p> 
   </div>
     
   <div class="form-group slidein">
-    <div class="nickname-form">
+    <div class="nickname-form text-secondary wf-mplus1p">
     <%#<div class="h5 mb-3 font-weight-normal">性別</div>%>
       <label for="性別" class="sr-only">性別</label>
-    <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"form-control form-control-newchara", id:"gender", placeholder:"出身"}) %>
+    <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"form-control-newchara kakomi-te2", id:"gender", placeholder:"出身"}) %>
     <p></p>
   </div>
 
   <div class="form-group">
-    <div class="nickname-form">
+    <div class="nickname-form text-secondary wf-mplus1p">
       <label for="自己紹介" class="sr-only">自己紹介</label>
-     <%= f.text_area :introductions, class:"form-control form-control-newchara slidein", id:"phone_number", placeholder:"自己紹介を入力してください" %>
+     <%= f.text_area :introductions, class:"form-control-newchara kakomi-te2 slidein", id:"phone_number", placeholder:"自己紹介を入力してください" %>
   </div>
 
     <%= image_submit_tag("sakusei_btn.jpg", class:"sakusei_btn",id:"sakusei") %>

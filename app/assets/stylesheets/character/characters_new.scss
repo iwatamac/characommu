@@ -102,6 +102,22 @@
   left: 310px;
 }
 
+.character-header_sanka {
+  width: 5%;
+  height: 20%;
+  position: absolute;
+  top: 0px;
+  left: 330px;
+}
+
+.character-header_sanka2 {
+  width: 5%;
+  height: 20%;
+  position: absolute;
+  top: 0px;
+  right: 330px;
+}
+
 .cover {
   width: 100vw;
   height: 100vh;
@@ -145,3 +161,44 @@
   left: 299px;
   top: 60px;
 }
+
+.hukidashi {
+  width: 6%;
+  height: 14%;
+  position: absolute;
+  top: 0px;
+  right: 230px;
+  transform: rotate( 90deg );
+}
+
+.kotoba {
+  width: 4%;
+  height: 4.5%;
+  position: absolute;
+  top: 25px;
+  right: 240px;
+}
+
+.hukidashi_left {
+  width: 6%;
+  height: 14%;
+  position: absolute;
+  top: 0px;
+  left: 230px;
+  transform: rotate( 270deg );
+}
+
+.kotoba_left {
+  width: 4%;
+  height: 4.5%;
+  position: absolute;
+  top: 25px;
+  left: 240px;
+}
+
+.kakomi-te2 {
+  padding: 0.5em 0.75em;
+  width: 100%; /*幅の調節*/
+  border: 2px solid #DDDDDD; /*線の太さ・色*/
+  border-radius: 3em .8em 3em .7em/.9em 2em .8em 3em;
+ }

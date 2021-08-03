@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class="side-bar">
     <div class="side-bar-header">
-    <div class="header-name">
+    <div class="header-name wf-mplus1p text-secondary">
       <%= link_to current_user.nickname, characters_path %>
     </div>
     <%= link_to image_tag("basyo_sakusei.jpg", class: "create-room"),new_place_path %>
@@ -10,7 +10,7 @@
   <div class="rooms">
     <div class="room">
     <% @places.each do |place| %>
-      <div class="room-name">
+      <div class="room-name text-secondary wf-mplus1p">
     <%= link_to place.name, place_messages_path(place) %>
       </div>
     <p></p>

@@ -16,9 +16,9 @@
     <% @characters.each do |character| %>  
       <%= link_to character_path(character.id) do %>
       <li><%= image_tag character.image, class: "character-img slidein" %>
-      <h3 class='character-name'></h3>
+      <div class='character-name text-secondary wf-mplus1p'>
       <%= character.name %>
-      </li>
+      </div></li>
     <% end %>
     <% end %>
     </ul>
