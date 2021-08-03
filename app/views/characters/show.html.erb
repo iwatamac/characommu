@@ -9,8 +9,8 @@
       <div class="character-btn-show">
       <% if user_signed_in? %>
       <% if current_user.id == @character.user_id %>
-      <%= link_to "編集", edit_character_path(@character.id), class: "character-edit-btn" %>
-      <%= link_to "削除", character_path, method: :delete, class: "character-delete-btn" %>
+      <%= link_to "編集", edit_character_path(@character.id), class: "character-edit-btn wf-mplus1p text-secondary" %>
+      <%= link_to "削除", character_path, method: :delete, class: "character-delete-btn wf-mplus1p text-secondary" %>
       <% end %>
       <% end %>
       </div>
@@ -18,19 +18,19 @@
   <div class="table-field-show">
   <table class="character-table slidein">
     <tbody>
-    <tr>
+    <tr class="wf-mplus1p">
       <th class="detail-character">名前</th>
       <td class="detail-value slidein"><%= @character.name %></td>
     </tr>
-    <tr>  
+    <tr class="wf-mplus1p">  
       <th class="detail-character">出身</th>
       <td class="detail-value slidein"><%= @character.residence %></td>
     </tr>
-    <tr>
+    <tr class="wf-mplus1p">
       <th class="detail-character">性別</th>      
       <td class="detail-value slidein"><%= @character.gender.name %></td> 
     </tr>
-    <tr>
+    <tr class="wf-mplus1p">
       <th class="detail-character">自己紹介</th>  
       <td class="detail-value slidein"><%= @character.introductions %></td> 
     </tr>

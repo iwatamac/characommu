@@ -13,9 +13,10 @@ class MessagesController < ApplicationController
 
   def create
     @place = Place.find(params[:place_id])
+    @messages = @place.messages.includes(:user)
     @message = @place.messages.new(message_params)
     if @message.save
-      redirect_to place_messages_path(@place)
+      render json: @message
     else
       @messages = @place.messages.includes(:user)
       @places = Place.all

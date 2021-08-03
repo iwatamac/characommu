@@ -78,6 +78,25 @@ document.addEventListener("turbolinks:load", function () {
     });
     });
 
+    document.addEventListener("turbolinks:load", function () {
+      $(function() {
+       
+        //画像にマウスを乗せたら発動
+        $('#sanka-form').hover(function() {
+       
+          //画像のsrc属性が別画像のパスに切り替わる
+          $(this).attr('src', '/assets/sanka_btn_hover.jpg');
+       
+        //ここにはマウスを離したときの動作を記述
+        }, function() {
+       
+          //画像のsrc属性を元の画像のパスに戻す
+          $(this).attr('src', '/assets/sanka_btn_form.jpg');
+       
+        });
+      });
+      });    
+
 
 setTimeout(() => {
   console.log("Execution 1sec"); // Execution 1sec

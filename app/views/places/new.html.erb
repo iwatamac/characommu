@@ -19,24 +19,23 @@
     <div class="force">
     <%= image_tag "basyo_sakusei.jpg", class:"form-header-text form-header-text_image mocchiri" %>
     </div>
-    <p></p>
     <%= render 'shared/error_messages', model: @place %>
 
   <div class="form-group">
     <div class="nickname-form">
       <label for="名前" class="sr-only">名前</label>
-      <%= f.text_area :name, class:"form-control form-control-newchara slidein", id:"character-name", placeholder:"場所の名前を入力してください" %>
+      <%= f.text_area :name, class:"form-control-newchara kakomi-te2 slidein text-secondary wf-mplus1p", id:"character-name", placeholder:"場所の名前を入力してください" %>
     <p></p> 
     </div>
       <label for="自分のキャラ" class="sr-only">性別</label>
-      <select name="place[character_ids][]" class="form-control slidein">
-          <option value="">チャットする自分のキャラクターを選択してください</option>
+      <select name="place[character_ids][]" class="kakomi-te2 slidein text-secondary wf-mplus1p">
+      <option value="">チャットする自分のキャラクターを選択してください</option>
           <% Character.where(user_id: current_user.id).each do |character| %>
             <option value=<%= character.id %>><%= character.name %></option>
           <% end %>
         </select>
         <p></p>
-        <select name="place[character_ids][]" class="form-control slidein">
+        <select name="place[character_ids][]" class="kakomi-te2 slidein text-secondary wf-mplus1p">
           <option value="">チャットするキャラクターを選択してください</option>
           <% Character.where.not(user_id: current_user.id).each do |character| %>
             <option value=<%= character.id %>><%= character.name %></option>
