@@ -1,20 +1,22 @@
 <head><link href="assets/sessions.scss" rel="stylesheet"></head>
   <body class="text-center">
     <%#form class="form-signin"%>
-    <%#= image_tag "characommu_haikei2.jpg", class: "haikei-registrations moving" %>
+    <%= image_tag "characommu_haikei2.jpg", class: "haikei-tops moving" %>
     <%= render 'shared/error_messages', model: @user %>
     <%= form_with model: @user, url: user_session_path, class: 'form-signin', local: true do |f| %>
   <%= image_tag("login.jpg", class: "login-sessions") %>
-  <div class="mail-form">
+
+  <div class="mail-form text-secondary wf-mplus1p">
   <label for="メール" class="sr-only">メールアドレス</label>
-    <%= f.email_field :email, class:"form-control slidein", id:"inpuEemail", placeholder:"メールアドレス", autofocus: true %>
-    
+    <%= f.email_field :email, class:"form-control-newchara kakomi-te2 slidein", id:"inpuEemail", placeholder:"メールアドレス", autofocus: true %>
   </div>
-  <p></p>
+
+  <div class="password-form text-secondary wf-mplus1p">
   <label for="inputPassword" class="sr-only">パスワード</label>
-  <%= f.password_field :password, class:"form-control slidein", id:"inputPassword", placeholder:"パスワード" %>
-  <p></p>
-  <button class="btn btn-md btn-secondary btn-block" type="submit">ログイン</button>
-  <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+  <%= f.password_field :password, class:"form-control-newchara kakomi-te2 slidein", id:"inputPassword", placeholder:"パスワード" %>
+  </div>
+
+  <%= image_submit_tag("login_btn.jpg", class:"registration_btn") %>
+
   <% end %>
 </body>
