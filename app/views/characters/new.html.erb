@@ -13,7 +13,7 @@
     <%= form_with model: @character, url: characters_path, class: 'form-new', local: true do |f| %>
   
     <div class="chara_seventh">
-    <%= image_tag "chara_jouhou", class:"form-header-text form-header-text_image mocchiri" %>
+    <%= image_tag "chara_jouhou.jpg", class:"form-header-text form-header-text_image mocchiri" %>
     </div>
     <p></p>
     <%= render 'shared/error_messages', model: @character %>
