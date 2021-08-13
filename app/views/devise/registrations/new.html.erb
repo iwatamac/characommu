@@ -1,12 +1,11 @@
  <head><link href="assets/registrations.scss" rel="stylesheet"></head>
   
-   <%= image_tag "characommu_haikei2.jpg", class: "haikei-tops moving" %>
    <body class="text-center">
     <%#form class="form-signin"%>
-   
+    <%= render 'shared/error_messages', model: @user %>
+    <%= image_tag "characommu_haikei2.jpg", class: "haikei-tops moving" %>
     <%= form_with model: @user, url: user_registration_path, class: 'form-signin', local: true do |f| %>
-      <%= render 'shared/error_messages', model: @user %>
-  
+      
   
   <div class="nickname-form text-secondary wf-mplus1p">
   <%= image_tag("regstration.jpg", class: "registration-tops") %>

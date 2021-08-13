@@ -77,9 +77,19 @@ header .user-nickname-tops {
   right: 650px;
   position: absolute;
 }
+.error-alert {
+  position: absolute;
+
+}
 
 .error {
-  z-index: 2;
+
+  position: absolute;
+}
+
+.error-message {
+
+  position: absolute;
 }
 
 @keyframes moving {

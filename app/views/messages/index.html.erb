@@ -20,6 +20,7 @@
   <div class="messages">
     <div class="message">
       <div class="image-messages">
+      <% if user_signed_in? && @character.present? %>
         <% @place.characters.each do |character| %>
         <%= link_to character_path(character.id) do %>
         <%= image_tag character.image, class:"image-message" %>
@@ -28,7 +29,9 @@
           </div>
       <% end %>
       <% end %>
+      <% end %>
       </div>
+      <% if @character %>
       <% @messages.each do |message| %>
       <div class="upper-message">
         <div class="message-user">        
@@ -43,6 +46,23 @@
         <%= message.content %>
         </div>
       </div> 
+      <% end %>
+      <% else %>
+      <% @messages.each do |message| %>
+      <div class="upper2-message">
+        <div class="message-user">        
+        <%= message.user.nickname %>
+        </div>
+        <div class="message-date">
+        <%= l message.created_at %>
+        </div>
+      </div>
+      <div class="lower2-message">
+        <div class="message-content">
+        <%= message.content %>
+        </div>
+      </div> 
+      <% end %>
       <% end %>
     </div>  
   </div>
