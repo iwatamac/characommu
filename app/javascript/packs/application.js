@@ -10,6 +10,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("../character")
 require("../chat")
+require('jquery')
 
 import 'bootstrap';
 import '../stylesheets/application';

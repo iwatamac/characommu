@@ -70,6 +70,25 @@ SNSを多く利用するユーザーにとってユーザー同士のコミュ�
 [![Image from Gyazo](https://i.gyazo.com/1f9381906ac201dab941ddc7c13cbbf5.gif)](https://gyazo.com/1f9381906ac201dab941ddc7c13cbbf5)
 [![Image from Gyazo](https://i.gyazo.com/8117d86cfa8d6fae18ca97c88f7d17fe.gif)](https://gyazo.com/8117d86cfa8d6fae18ca97c88f7d17fe)
 
+## 工夫したポイント
+・気軽さと親しみやすさを出すため手書き風のフロントにしたことです。
+・マイページで上手くないあるいは落書きの絵が並んでも違和感のないように、フロントはシンプルかつモノクロにしました。
+・チャットを終わらせる時、ルーム削除機能だとチャットもキャラクターも消えてしまい、続きから始める事ができないためルーム退出機能を実装しました。
+・キャラクターの情報入力は気軽に作成できるように項目は少なく設定しました。また、少ない方が自由にチャットができると思いました。
+
+## 使用技術(開発環境)
+### バックエンド
+Ruby,Ruby on Rails
+### フロントエンド
+HTML,CSS,JavaScript,jQuery
+### データベース
+MySQL
+### ソース管理
+GitHub,GitHubDesktop
+### テスト
+Rspec
+### エディタ
+VSCode
 
 ## 実装予定の機能
 ### ログイン・会員登録機能:
