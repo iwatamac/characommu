@@ -36,6 +36,7 @@ SNSを多く利用するユーザーにとってユーザー同士のコミュ�
 ユーザーが会員登録ページでメールアドレスやパスワードを入力して会員登録ができ、トップページにログインユーザー名が表示されます。ログアウトしたユーザーがログインページで、登録したメールアドレスとパスワードを入力してデータと一致すればログインする事ができます。ログインした後にユーザー名が表示されるのでクリックするとマイページのキャラクター一覧画面に遷移されます。
 [![Image from Gyazo](https://i.gyazo.com/730d0988b06da578a9430c726ea95c9e.gif)](https://gyazo.com/730d0988b06da578a9430c726ea95c9e)
 [![Image from Gyazo](https://i.gyazo.com/07d4c2d6b8657b8b41e122991f6c7d92.gif)](https://gyazo.com/07d4c2d6b8657b8b41e122991f6c7d92)
+[![Image from Gyazo](https://i.gyazo.com/7f8e4693ccb9d19f7a9a4f06e2548ea9.gif)](https://gyazo.com/7f8e4693ccb9d19f7a9a4f06e2548ea9)
 ### キャラクター投稿機能:
 ログインユーザーがキャラクター新規作成ページで、描いたキャラクターの画像とキャラクターの情報を入力すると投稿する事ができます。投稿されたものはマイページにキャラクターの画像と名前が一覧表示されます。
 [![Image from Gyazo](https://i.gyazo.com/451c1260eaf3d410dafda6d1bbc9be2a.gif)](https://gyazo.com/451c1260eaf3d410dafda6d1bbc9be2a)
